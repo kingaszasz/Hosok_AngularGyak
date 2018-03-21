@@ -1,0 +1,24 @@
+<!-- kétirányú adatkapcsolat-->
+<form (submit)='submitNewHero()'>
+  <div class="form-group">
+    <label class="sr-only" for="name">Your Hero's name:</label>
+    <input name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Név" [(ngModel)]="hero.name">
+    <small id="nameHelp" class="form-text text-muted">Bárki lehet a Te Hősöd!</small>
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="special">Speciality:</label>
+    <input name="special" type="text" class="form-control" id="special" placeholder="Különleges képesség" [(ngModel)]="hero.special">
+    <small id="specialHelp" class="form-text text-muted">Miben király a te új Hősöd?</small>
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="address">Address:</label>
+    <input name="address" type="text" class="form-control" id="address" placeholder="Cím" [(ngModel)]="hero.address">
+    <small id="addresHelp" class="form-text text-muted">Hol találjuk meg ezt akis Hőst?</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ment</button>
+</form>
+
+
+
+<pre> {{hero | json}}</pre>
